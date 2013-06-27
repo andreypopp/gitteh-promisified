@@ -4,7 +4,8 @@
   "description": "gitteh with promisified API",
   "main": "index.js",
   "dependencies": {
-    "kew": "~0.1.7"
+    "kew": "~0.1.7",
+    "gitteh": "~0.17.2"
   },
   "devDependencies": {
     "coffee-script": "~1.6.2",
