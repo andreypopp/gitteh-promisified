@@ -2,10 +2,10 @@ gitteh = require 'gitteh'
 {defer} = require 'kew'
 
 promisify = (func) ->
-  (args..., cb) ->
-    args.push(cb)
-    if typeof cb == 'function'
+  (args...) ->
+    if args.length > 0 and typeof args[args.length - 1] == 'function'
       func.call(this, args...)
+
     else
       promise = defer()
       args.push (err, result) ->

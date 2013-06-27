@@ -8,10 +8,9 @@ defer = require('kew').defer;
 
 promisify = function(func) {
   return function() {
-    var args, cb, promise, _i;
-    args = 2 <= arguments.length ? __slice.call(arguments, 0, _i = arguments.length - 1) : (_i = 0, []), cb = arguments[_i++];
-    args.push(cb);
-    if (typeof cb === 'function') {
+    var args, promise;
+    args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+    if (args.length > 0 && typeof args[args.length - 1] === 'function') {
       return func.call.apply(func, [this].concat(__slice.call(args)));
     } else {
       promise = defer();
