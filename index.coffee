@@ -3,8 +3,8 @@ gitteh = require 'gitteh'
 
 promisify = (func) ->
   (args..., cb) ->
+    args.push(cb)
     if typeof cb == 'function'
-      args.push(cb)
       func.call(this, args...)
     else
       promise = defer()
