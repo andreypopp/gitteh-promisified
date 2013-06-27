@@ -1,6 +1,6 @@
 {
   "name": "gitteh-promisified",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "gitteh with promisified API",
   "main": "index.js",
   "dependencies": {
@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/andreypopp/gitteh-promisified",
   "keywords": [
-    "git", "gitteh", "promise", "api"
+    "git",
+    "gitteh",
+    "promise",
+    "api"
   ],
   "author": {
     "name": "Andrey Popp",
