@@ -1,1 +1,1 @@
-Promisified API for gitteh (node bindings for lobgit2)
+Promisified API for gitteh (node bindings for libgit2)
