@@ -8,8 +8,7 @@ promisify = (func) ->
 
     else
       promise = defer()
-      args.push (err, result) ->
-        if err then promise.reject(err) else promise.resolve(result)
+      args.push(promise.makeNodeResolver())
       func.call(this, args...)
       promise
 

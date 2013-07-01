@@ -14,13 +14,7 @@ promisify = function(func) {
       return func.call.apply(func, [this].concat(__slice.call(args)));
     } else {
       promise = defer();
-      args.push(function(err, result) {
-        if (err) {
-          return promise.reject(err);
-        } else {
-          return promise.resolve(result);
-        }
-      });
+      args.push(promise.makeNodeResolver());
       func.call.apply(func, [this].concat(__slice.call(args)));
       return promise;
     }
